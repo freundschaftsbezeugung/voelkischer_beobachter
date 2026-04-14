@@ -1,0 +1,352 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;700;900&display=swap');
+
+  .np-root {
+    direction: rtl;
+    font-family: 'Frank Ruhl Libre', serif;
+    background: #f5f0e8;
+    color: #111;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .np-paper {
+    background: #faf7f0;
+    border: 1px solid #aaa;
+    padding: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.18);
+  }
+  .np-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #222;
+    padding: 3px 10px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 10px;
+    background: #faf7f0;
+  }
+  .np-topbar-center {
+    font-size: 11px;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    flex: 1;
+  }
+  .np-masthead-area {
+    border-bottom: 3px solid #111;
+  }
+  .np-masthead-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px 2px;
+    font-family: 'Heebo', sans-serif;
+    font-size: 9px;
+    color: #333;
+  }
+  .np-masthead-title {
+    text-align: center;
+    padding: 4px 10px 0px;
+    line-height: 1;
+  }
+  .np-masthead-title h1 {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 54px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #000;
+  }
+  .np-masthead-subtitle {
+    text-align: center;
+    font-family: 'Heebo', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 2px 0 4px;
+    border-top: 1px solid #555;
+    margin: 0 10px;
+  }
+  .np-eagle {
+    font-size: 22px;
+    display: inline-block;
+    margin: 0 6px;
+  }
+  .np-headline-block {
+    border-bottom: 2px solid #111;
+    padding: 6px 10px 4px;
+    text-align: center;
+  }
+  .np-main-headline {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .np-sub-headline {
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 4px 0 0;
+    letter-spacing: 0.5px;
+  }
+  .np-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0;
+    border-bottom: 1.5px solid #222;
+  }
+  .np-col {
+    padding: 8px 10px;
+    border-right: 1px solid #888;
+    font-size: 11px;
+    line-height: 1.55;
+    text-align: justify;
+  }
+  .np-col:first-child {
+    border-right: none;
+  }
+  .np-col-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    line-height: 1.2;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+  }
+  .np-col-byline {
+    font-family: 'Heebo', sans-serif;
+    font-size: 9.5px;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  .np-col-date {
+    font-family: 'Heebo', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: right;
+  }
+  .np-col p {
+    margin: 0 0 5px 0;
+    hyphens: auto;
+  }
+  .np-bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .np-bottom-col {
+    padding: 7px 10px;
+    border-right: 1px solid #888;
+    font-size: 10.5px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  .np-bottom-col:first-child { border-right: none; }
+  .np-bottom-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+    text-align: center;
+  }
+  .np-bottom-subtitle {
+    font-size: 10px;
+    font-style: italic;
+    text-align: center;
+    color: #444;
+    margin-bottom: 4px;
+  }
+  .np-center-block {
+    grid-column: 2 / 3;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888;
+  }
+  .np-center-img-placeholder {
+    background: #ddd;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    color: #666;
+    margin: 4px 0;
+    border: 1px solid #bbb;
+  }
+  hr.np-rule { border: none; border-top: 1px solid #555; margin: 5px 0; }
+  .np-drop-cap::first-letter {
+    font-size: 30px;
+    font-weight: 900;
+    float: right;
+    line-height: 0.85;
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+  .np-middle-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1fr;
+    gap: 0;
+    border-bottom: 1.5px solid #222;
+  }
+  .np-middle-center {
+    padding: 8px 10px;
+    border-right: 1px solid #888;
+    border-left: 1px solid #888;
+  }
+  .np-middle-center-title {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 2px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+  }
+  .np-middle-center-subtitle {
+    font-family: 'Heebo', sans-serif;
+    font-size: 9.5px;
+    text-align: center;
+    color: #555;
+    margin-bottom: 5px;
+  }
+</style>
+
+<div class="np-root">
+<div class="np-paper">
+
+  <!-- Top bar -->
+  <div class="np-topbar">
+    <span>גיליון 93 / שנה 58 / מחיר יחידה: 15 פ"ר</span>
+    <span class="np-topbar-center">״חירות ולחם!״</span>
+    <span>גיליון 93 / מינכן, יום שישי, 20 באפריל 1945</span>
+  </div>
+
+  <!-- Masthead -->
+  <div class="np-masthead-area">
+    <div class="np-masthead-top">
+      <div style="font-size:8.5px; max-width:220px;">
+        מרכז הוצאת המ.ס.ד.א.פ. — עורך ראשי: מקס אמן — עריכה: מינכן 33, טיירשטראסה 15 — טלפונים: 21.45 71, 21.96 71, 26.18 71, 26.37 71 — ר"ב 72 80, טלגרף: מינכן (אפ"ד 71)
+      </div>
+      <div class="np-masthead-title">
+        <h1>המשקיף העממי</h1>
+        <div style="display:flex;align-items:center;justify-content:center;gap:8px;margin:1px 0;">
+          <span style="font-size:13px;font-family:'Heebo',sans-serif;font-weight:300;letter-spacing:3px;">— ✠ —</span>
+        </div>
+      </div>
+      <div style="font-size:8.5px; max-width:200px; text-align:left;">
+        מנויים: מינכן 20, שלייסהיימרשטראסה 35 — מינכן 2, אמהופשטראסה 8 — ר"ב 5 58 21 — עיתון המאבק של התנועה הלאומית-סוציאליסטית של גרמניה הגדולה
+      </div>
+    </div>
+    <div class="np-masthead-subtitle">
+      עיתון המאבק של התנועה הלאומית-סוציאליסטית של גרמניה הגדולה
+    </div>
+  </div>
+
+  <!-- Main headline -->
+  <div class="np-headline-block">
+    <h2 class="np-main-headline">גרמניה עומדת איתנה ונאמנה לפיהרר</h2>
+    <div class="np-sub-headline">מצוות החובה ביום הולדתו ה-56 של אדולף היטלר</div>
+  </div>
+
+  <!-- Three columns -->
+  <div class="np-columns">
+
+    <!-- Right col: Goebbels -->
+    <div class="np-col">
+      <div class="np-col-title">איש המאה</div>
+      <div class="np-col-byline">נאום הרדיו של שר הרייך ד"ר גבלס</div>
+      <div class="np-col-date">ברלין, 19 באפריל.</div>
+      <p class="np-drop-cap">שר הרייך ד"ר גבלס פנה ערב יום הולדת הפיהרר בנאום רדיו אל העם הגרמני, ובו הצביע על הסכנות העומדות בפני גרמניה ועל ייעוד הפיהרר ועמו.</p>
+      <p>ברגע זה של תולדות המלחמה, כאשר כוחות אפלים של הגורל נראים עומדים לצדנו ומאיימים להכריע אותנו, הוא מופיע שוב — אם נותר לנו לנסח זאת כך — בכוח אדיר ורצון בל ייפול, כפי שתמיד הופיע בשעות הקשות ביותר של חייו ותנועתו.</p>
+      <p>אין זה רגע רגיל. עם שעה לפניו משימה נוראה ועתיד הצצה לכאן ולכאן מבין הסלעים, נדרש מנהיג כמוהו — אחד שאינו כורע תחת נטל גורלו, אלא שואב ממנו כוח. כך תמיד היה ביחסו לפיהרר. לא פחות ולא יותר.</p>
+      <p>עיניו של מי שאינו יכול לראות את הדברים הגדולים — מי שלאורך 20 שנה עמד לצידו של הפיהרר — תיפקחנה רק לאחר מות הגיבורים. כך מתנהגת ההיסטוריה עם גדוליה. כוחותיו תמיד הפתיעו, גם אז כשקטנות החוקים ורפיסות בני-הזמן הצרו עליו.</p>
+      <p>הוא הסתכל מן הפסגה הגדולה אל התהום החשוכה ומשם נשא מבטו שוב אל אורות הניצחון. מה שמתנוסס מנגד אלינו הוא בל יתואר — עד שלא ניגש למדוד אותו, לא נוכל להבין את גדולתו של הרגע הזה.</p>
+      <hr class="np-rule"/>
+      <p>הנה עומד לנו כאן אדם, שדרכו אמנם אינה קלה — בכך לא מדובר — אך כוחות תנועתו, לאומו ואמונתו עומדים לרשותו בשעת הצורך. לא הרעב, הפצצות, ייאוש ופחד הם שישלטו — כל ה"חוכמה" שאויבינו העלו מן ההיסטוריה — אלא נחישות לב אחת ורחבה, יחד עם רצונו של עם שלם: זה הוא הדבר שישים קץ למאבק.</p>
+      <p>שורות כאלה, שיעברו בהם, אינן הבעת רגש אישי — הן צורך חיוני של השעה ופנייה אל הפיהרר כאל מנהיג אחד ויחיד.</p>
+    </div>
+
+    <!-- Center col: Photo placeholder + pledge -->
+    <div class="np-col" style="border-right:1px solid #888; border-left:1px solid #888;">
+      <div class="np-center-img-placeholder">[תצלום: הפיהרר ביום הולדתו ה-56]<br/>מקור: פרס-הופמן</div>
+      <hr class="np-rule"/>
+      <div class="np-col-title" style="font-size:15px;">שבועת הקרב של נירנברג</div>
+      <div class="np-col-byline">חיילי הפיהרר — אמיצים, גאים ונאמנים</div>
+      <div class="np-col-date">מפקדת הפיהרר, 18 באפריל.</div>
+      <p>בתשובה לפניית הפיהרר, כתב קרל הולץ:</p>
+      <p style="padding:4px 8px; border-right:2px solid #555; font-style:italic;">"פיהרר יקר! אנו מכריזים כי עיר נירנברג, נאמנה לעיקרון הלאומי-סוציאליסטי, תמשיך לעמוד איתנה. כל אחד מאזרחיה ילחם כדי שהזהב מהכתר הקרבי של הרייך הגרמני לא יבזוז על ידי האויב."</p>
+      <p>הוא מוסיף: "זה רק הקרב הראשון של הפאנצר — הכוח עצום, כגבורת הרוח הגרמנית. כמה גדול תמיד יהיה האויב — הרוח הגרמנית תגבר עליו תמיד. אנחנו הולכים ולא נסוג."</p>
+      <p>הוא מסיים: "אנו מברכים את הנבחרות הלאומיות, ומאמינים בניצחון הסופי על כל שונאי עם גרמניה."</p>
+      <p style="font-weight:700; text-align:center; font-size:11px;">כוח האדמה של עיר הזהב מוגש כקורבן לכבוד פיהרר גרמניה.<br/>קרל הולץ</p>
+    </div>
+
+    <!-- Left col: Der Führer -->
+    <div class="np-col">
+      <div class="np-col-title">הפיהרר</div>
+      <div class="np-col-byline">מאת וילהלם וייס</div>
+      <p class="np-drop-cap">העם הגרמני בוחן את עצמו מאז תחילת המשבר הכבד ביותר שידע עם לאומי אי פעם — כאשר מחליט לשרוד על-אף הכול, ועל אף שכוחות אדיריים פועלים מבפנים ומבחוץ כדי לאלצו לוותר על עצמאותו ועל עתידו.</p>
+      <p>עם שהחליט לעצמו לא לוותר על עצמו — לא לתת לשסועים כלשהם לשלוט בו — מוצא את עצמו בשעה שסימני הזמן נראים בלתי-נסבלים. המועד שבו הוא מסתכל על ניצחון, גם אם עדיין ממרחק, מתגלה לו כשעה הכבדה ביותר. זהו גורלו של כל עם שקובע לעצמו גדולות.</p>
+      <p>מה שמניע עם זה בשעה הנוכחית — אינו ייאוש, אלא עוצמה; לא בריחה, אלא עמידה. כוח הסבל בא בזמן שבו לא ניתן לראות את הסוף — בזמן שבו כל ההגיון מורה להיכנע. הגרמנים בחרו בדרך שבה אין כניעה — ולכן הם יצאו לסיים את הדרך גם אם כל המחיר כבד.</p>
+      <hr class="np-rule"/>
+      <p>הפיהרר עצמו, כפי שיסופר על ידי ההיסטוריה שתבוא, לא היה איש שחיפש כבוד לעצמו — הוא היה אדם שראה בעמו שליחות, ומכוח שליחות זו פעל. לא שמחה ולא רגיעה — אלא מסע אחד בלתי-פוסק לטובת הדבר שהאמין בו.</p>
+      <p>גרמניה, גם בשעה הקשה ביותר, עומדת ביחד אחרי הפיהרר. זה אינו שבח ריק — זה אמת הכרחית. העם שכרת ברית עם מנהיגו לא יבגוד בו ברגע הקשה ביותר.</p>
+      <p>ביום הולדתו ה-56, אנו מאחלים לפיהרר גבורת-נפש לנהל את המאבק עד הניצחון.</p>
+    </div>
+
+  </div><!-- end 3 columns -->
+
+  <!-- Bottom 4 columns -->
+  <div class="np-bottom-section">
+
+    <div class="np-bottom-col">
+      <div class="np-bottom-title">תוכנית החוץ המוצגת</div>
+      <div class="np-bottom-subtitle"></div>
+      <p>אנו חיים ורואים ברחבי הזמן בשעה הנוכחית הזדמנות ייחודית — כמדינה, כתנועה, כעם. הסרט מקיים, כדאי לצפות בו, ורב הצד הגרמני בסרט.</p>
+      <p>כך חיינו: ב-9 בנובמבר 1918 היה ניתן להציל אותנו — לא עשינו זאת. מה שחסך מאיתנו אז לא ניתן לשחזר. אנחנו חיים כעת בשלב שבו מה שלא נחסוך עכשיו — לא יבוא לנו עוד.</p>
+      <p>כאשר הוא, הפיהרר, עולה לגדולה — הוא עושה זאת בשם מי שלא יכול לייצג את עצמו. תפקידנו הוא לשמור על אמונה זו.</p>
+    </div>
+
+    <div class="np-bottom-col">
+      <div class="np-bottom-title">מה שמחייב אותנו</div>
+      <p>טוב הוא הגרמני, שאינו מוותר — שגם בשעה הקשה ביותר, ביום שנראה כי המאבק אבוד, שב ומחפש בתוכו את הכוח להמשיך. אמנות זו של הסבל — להיות נאמן גם כשלא רואים אור — היא המידה האמיתית של עם.</p>
+      <p>מה שמחייב אותנו הוא לא פחד ולא פחד מפחד. הוא ידיעה שאנחנו בחרנו בדרך אחת — ואת הדרך הזאת אנחנו חייבים ללכת עד סופה. הפיהרר בחר בדרך זו עבורנו; תפקידנו לאמת את הבחירה הזאת.</p>
+      <p>ביום הולדתו ה-56, כל גרמני צריך להצהיר: הנאמנות לא תיגמר — לא היום ולא מחר.</p>
+    </div>
+
+    <div class="np-bottom-col">
+      <div class="np-bottom-title">מדי יום בקרבות</div>
+      <p>כל יום שעובר הוא יום נוסף של הוכחה. גרמנים בכל החזיתות — ממזרח ומערב, מצפון ומדרום — ממשיכים להחזיק עמדות שאויבינו חשבו שנפלו כבר.</p>
+      <p>לא ייפלא שהעולם הצופה בנו מחוץ תוהה: מהיכן שואבים הם את הכוח? התשובה היא: מהאמונה. מהידיעה שמאבק צודק אינו ניתן לכבות — לא בפצצות ולא בתכסיסים.</p>
+      <p>הפיהרר בשעה הקשה ביותר: הגרמנים ידעו גם מהמלחמה הקודמת מה פירושו של ניצחון שנגזל — הפעם לא ייגזל.</p>
+    </div>
+
+    <div class="np-bottom-col">
+      <div class="np-bottom-title">הגורל בידינו</div>
+      <p>אין שוב ספק — הגורל נמצא בידינו. לא בידי אויבינו, לא בידי הנסיבות — בידינו. כל עוד גרמני אחד מסרב להיכנע, המאבק לא תם. זוהי האמת הפשוטה שאנחנו חוגגים ביום הולדת הפיהרר.</p>
+      <p>מאז הקטסטרופה של 1918, שנת הבגידה, ידעה גרמניה כי היא צריכה לבנות מחדש את עצמה. הפיהרר היה הכלי של ההיסטוריה לבניין הזה — ואנחנו היינו שותפיו.</p>
+      <p>היום, 20 באפריל 1945, ביום הולדתו ה-56, גרמניה מצהירה: הנאמנות לפיהרר אינה נגמרת בשעת הסכנה — היא מתחזקת דווקא אז. גרמניה עומדת — איתנה ונאמנה.</p>
+    </div>
+
+  </div><!-- end bottom section -->
+
+  <div style="text-align:center; font-family:'Heebo',sans-serif; font-size:9px; color:#666; padding:4px; border-top:1px solid #aaa;">
+    [מסמך היסטורי — תרגום לעברית לצרכי מחקר ולימוד בלבד — מינכן, 20 באפריל 1945]
+  </div>
+
+</div><!-- np-paper -->
+</div><!-- np-root -->
